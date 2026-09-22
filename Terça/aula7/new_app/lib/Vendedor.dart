@@ -1,11 +1,17 @@
 import 'Funcionario.dart';
+import 'Bonificavel.dart';
 
-class Vendedor extends Funcionario{
+class Vendedor extends Funcionario implements Bonificavel {
 
   double _metaVendas = 0;
 
   Vendedor(String nome, double salario, double metaVendas) : super(nome, salario){
     _metaVendas = metaVendas;
+  }
+
+  @override
+  double calcularBonificacao() {
+    return getSalario * 0.2 + _metaVendas * 0.1;
   }
 
   //Getters & Setters 
@@ -22,7 +28,7 @@ class Vendedor extends Funcionario{
 
   @override
   String exibirInformacoes(){
-    return super.exibirInformacoes() + ", Meta: $_metaVendas";
+    return super.exibirInformacoes() + ", Meta: $_metaVendas, Bonificação: ${calcularBonificacao()}";
   }
 
 }
