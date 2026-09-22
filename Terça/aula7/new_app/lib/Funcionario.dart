@@ -18,14 +18,14 @@ abstract class Funcionario {
     return _salario;
   }
 
-  void set setNome(String novoNome) {
+  set setNome(String novoNome) {
     if (novoNome.isEmpty) {
       throw Exception("Nome não pode ser vazio");
     }
     this._nome = novoNome;
   }
 
-  void set setSalario(double novoSalario) {
+  set setSalario(double novoSalario) {
     if (novoSalario < 0) {
       throw Exception("Salário não pode ser negativo");
     }
