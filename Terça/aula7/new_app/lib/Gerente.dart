@@ -19,4 +19,9 @@ class Gerente extends Funcionario {
     }
     _setor = novoSetor;
   }
+
+  @override
+  String exibirInformacoes(){
+    return super.exibirInformacoes() + ", Setor: $_setor";
+  }
 }
