@@ -1,8 +1,3 @@
-import 'package:new_app/new_app.dart';
+import 'package:new_app/Funcionario.dart';
 import 'package:test/test.dart';
 
-void main() {
-  test('calculate', () {
-    expect(calculate(), 42);
-  });
-}
